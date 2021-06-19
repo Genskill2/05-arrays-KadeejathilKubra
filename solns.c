@@ -35,7 +35,7 @@ float average(int a[], int n)
  
     return (float)sum/n;
 }
-int mode(int a[], int n);
+int mode(int a[], int n)
 {
   int count = 1, tempCount;
   int popular = a[0];
