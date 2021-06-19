@@ -68,22 +68,20 @@ int factors(int n, int x[])
         n = n/2; 
     } 
     
-    // n must be odd at this point.  So we can skip  
-    // one element (Note i = i +2) 
     for (int i = 3; i <= sqrt(n); i = i+2) 
     { 
-        // While i divides n, print i and divide n 
-	    int d=1;
+        
+	int d=1;
         while (n%i == 0) 
         { 
             x[d]=i; 
             n = n/i; 
-	d++;
+	    d++;
 	    
         } 
-	    return d;
 	    
-    } 
+     } 
+return d;
     
     
 } 
