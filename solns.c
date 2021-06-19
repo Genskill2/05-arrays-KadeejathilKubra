@@ -61,7 +61,7 @@ int mode(int a[], int n)
 }
 int factors(int n, int x[]){
 	int j=0;
-for(i=1;i<=n;i++)
+for(int i=1;i<=n;i++)
         {
             if(n%i==0)
             {
