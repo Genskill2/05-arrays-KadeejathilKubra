@@ -2,6 +2,7 @@
 #include <stdio.h>
 int max(int [], int);
 int min(int [], int);
+float average(int [], int);
 int max(int x[],int k)
 {
 	int t,i;
@@ -24,4 +25,12 @@ int min(int x[],int k)
 	}
 	return(t);
 }
-
+float average(int a[], int n)
+{
+    
+    int sum = 0;
+    for (int i=0; i<n; i++)
+       sum += a[i];
+ 
+    return (float)sum/n;
+}
