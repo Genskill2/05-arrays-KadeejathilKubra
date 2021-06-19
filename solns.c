@@ -4,6 +4,7 @@ int max(int [], int);
 int min(int [], int);
 float average(int [], int);
 int mode(int [], int);
+int factors(int, int []);
 int max(int x[],int k)
 {
 	int t,i;
@@ -57,3 +58,31 @@ int mode(int a[], int n)
   }
   return popular;
 }
+int factors(int n, int x[])
+{ 
+    
+    while (n%2 == 0) 
+    { 
+        x[0]=2; 
+        n = n/2; 
+    } 
+    
+    // n must be odd at this point.  So we can skip  
+    // one element (Note i = i +2) 
+    for (int i = 3; i <= sqrt(n); i = i+2) 
+    { 
+        // While i divides n, print i and divide n 
+	    int d=1;
+        while (n%i == 0) 
+        { 
+            x[d]=i; 
+            n = n/i; 
+	d++
+	    
+        } 
+	    return d;
+	    
+    } 
+    
+    
+} 
