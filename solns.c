@@ -79,9 +79,15 @@ int factors(int n, int x[])
 	    d++;
 	    
         } 
+	    if (n > 2)
+	    {
+		    d=d+1;
+		    x[d]=n;
+	    }
+	return d;
 	    
      } 
-return d;
+
     
     
 } 
