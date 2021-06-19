@@ -1,5 +1,6 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
+#include<math.h>
 int max(int [], int);
 int min(int [], int);
 float average(int [], int);
@@ -77,7 +78,7 @@ int factors(int n, int x[])
         { 
             x[d]=i; 
             n = n/i; 
-	d++
+	d++;
 	    
         } 
 	    return d;
