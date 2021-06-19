@@ -59,18 +59,35 @@ int mode(int a[], int n)
   }
   return popular;
 }
-int factors(int n, int x[]){
-	int j=0;
-for(int i=1;i<=n;i++)
-        {
-            if(n%i==0)
-            {
-                x[j]=i;
-                j++;
-                
-            }
-        }
-return j;
-    
-    
-} 
+int factors(int n, int f[])
+{
+	
+	int num=n,m=0,i=2;
+	while(num!=1)
+	{
+		int flag=0;
+		for(int j=2;j<=i/2;j++)
+		{
+			if(i%j==0)
+			{
+				flag=1;
+				break;
+			}
+				
+		}
+		if (flag==0)
+		{
+			while(num%i==0)
+			{
+				num=num/i;
+				f[m]=i;
+				m++;
+			}
+				
+			
+		}
+		i++;
+	}
+	
+	return m;
+}
