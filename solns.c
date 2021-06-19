@@ -3,6 +3,7 @@
 int max(int [], int);
 int min(int [], int);
 float average(int [], int);
+int mode(int [], int);
 int max(int x[],int k)
 {
 	int t,i;
@@ -33,4 +34,26 @@ float average(int a[], int n)
        sum += a[i];
  
     return (float)sum/n;
+}
+int mode(int a[], int n);
+{
+  int count = 1, tempCount;
+  int popular = a[0];
+  int temp = 0;
+  for (int i = 0; i < (n - 1); i++)
+  {
+    temp = a[i];
+    tempCount = 0;
+    for (int j = 1; j < n; j++)
+    {
+      if (temp == a[j])
+        tempCount++;
+    }
+    if (tempCount > count)
+    {
+      popular = temp;
+      count = tempCount;
+    }
+  }
+  return popular;
 }
